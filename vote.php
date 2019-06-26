@@ -50,8 +50,9 @@
 		<table class="table table-bordered">
 
 			<?php 
-
-			$sql = "SELECT * FROM candidate";
+			$position = $_SESSION['year_level'];
+			//$position = 'FCVAC';
+			$sql = "SELECT * FROM candidate WHERE position='$position'";
 			$result = $conn->query($sql);
 
 			while ($row = $result->fetch_array()) {
